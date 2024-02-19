@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE MOST ICONIC PORSCHE CARS IN HISTORY</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Switzer:wght@200&display=swap">
+    
+    <style>
+        body {
+            font-family: 'Switzer', sans-serif;
+            font-weight: 250;
+            line-height: 1.2;
+            margin: 40px;
+            background-color: #ff0000;
+            color: #000000;
+        }
+
+        h1 {
+            text-align: left;
+            font-size: 116px;
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 300px;
+            margin-top: 150px;
+            font-family: 'Switzer', sans-serif;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            font-size: 28px;
+            color: #dfdfdf;
+        }
+
+        strong {
+            color: #000;
+        }
+
+        p {
+            color: #ffffff;
+            margin-bottom: 55px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 60px;
+        }
+
+        .grid-item {
+            border: 10px solid #000000;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 20px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .menu-icon {
+            display: block;
+            cursor: pointer;
+            font-size: 30px;
+            position: fixed;
+            top: 37px;
+            right: 20px;
+            color: #000000;
+            z-index: 2;
+        }
+
+        @media screen and (max-width: 1600px) {
+            .nav-links {
+                display: none;
+                text-align: left;
+            }
+
+            .menu-icon {
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    top: 37px;
+    right: 20px;
+    z-index: 2;
+    width: 40px; /* 전체 쉐입의 가로 길이 */
+    height: 40px; /* 전체 쉐입의 세로 길이 */
+}
+
+.hamburger-line {
+    width: 54px; /* 선의 가로 길이 */
+    height: 25px; /* 선의 세로 두께 */
+    background-color: #000; /* 선의 색상 */
+    margin-bottom: 4px; /* 선 사이의 간격 */
+    border-radius: 0px; /* 선의 모서리 둥글게 */
+}
+
+            .nav-active {
+                display: block;
+            }
+        }
+
+        .side-menu {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            height: 100%;
+            width: 250px;
+            background-color: black;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 1;
+        }
+
+        .side-menu a {
+            padding: 15px 25px;
+            text-decoration: center;
+            font-size: 24px;
+            color: #ff0000;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .side-menu a:hover {
+            color: #0096d7;
+        }
+
+        .horizontal-menu {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+        }
+
+        .horizontal-menu a {
+            font-family: 'Switzer', sans-serif;
+            text-decoration: none;
+            margin-right: 15px;
+            font-size: 16px;
+            color: #070000;
+        }
+
+        .history-of-porsche {
+            font-size: 36px;
+            margin-bottom: 30px;
+            float: left;
+            margin-right: 20px;
+            width: calc(100% - 400px);
+        }
+
+        .history-of-porsche p {
+            margin-bottom: 20px;
+        }
+
+        #porscheImage {
+            display: block;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            position: relative; /* Added */
+            top: -100px; /* Adjusted */
+            margin-bottom: -100px; /* Adjusted */
+        }
+
+        #porscheImage.visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-icon" onclick="toggleSideMenu()">
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+    </div>
+
+    <nav class="side-menu" id="sideMenu">
+        <a href="javascript:void(0)" class="menu-icon" onclick="toggleSideMenu()">×</a>
+        <a href="#porsche911-section" onclick="scrollToSection('porsche911-section')">PORSCHE 911</a>
+        <a href="#porsche356-section" onclick="scrollToSection('porsche356-section')">PORSCHE 356</a>
+        <a href="#porsche917-section" onclick="scrollToSection('porsche917-section')">PORSCHE 917</a>
+        <a href="#porscheCarreraGt-section" onclick="scrollToSection('porscheCarreraGt-section')">PORSCHE CARRERA GT</a>
+        <a href="#porsche959-section" onclick="scrollToSection('porsche959-section')">PORSCHE 959</a>
+        <a href="#porsche550spyder-section" onclick="scrollToSection('porsche550spyder-section')">PORSC HE 550 SPYDER</a>
+        <a href="#porsche928-section" onclick="scrollToSection('porsche928-section')">PORSCHE 928</a>
+    </nav>
+
+    <div class="horizontal-menu">
+        <a href="float.html" target="_blank">FLOAT</a>
+        <link><a href="flex.html" target="_blank">FLEX</a> </link> 
+    </div>
+    <div class="horizontal-menu">
+        <a href="#history-of-porsche" onclick="scrollToSection('history-of-porsche')">FLOAT</a>
+        <link> <a href="flex.html" target="_blank">FLEX</a> </link>
+    </div>
+
+    <header>
+        <h1>THE MOST ICONIC PORSCHE CARS IN HISTORY</h1>
+    </header>
+
+    <div class="history-of-porsche" id="history-of-porsche">
+        <h2 style="font-size: 105px;">History Of Porsche</h2>
+        <img id="porscheImage" src="https://images-porsche.imgix.net/-/jssmedia/40C889964089430BA9AB829455664830_375E436C8AE34ED8AD8B64DA45BE0C80_the-most-iconic-porsche-colours-2?w=2024&h=auto" style="display: none;">
+        <p>From its inception, the Porsche brand name was one associated with luxury and racecars, a tradition that has stood the test of time over the ages. The founder, Ferdinand Porsche, was once the chief engineer at Mercedes-Benz, and he even spent time working on Volkswagen vehicles. Porsche began his own company in 1931, naming the company after himself when it was incorporated. After that, Porsche began producing vehicles that would go on to become legendary for their performance and quality.</p>
+        <p>The very first Porsche nameplate was designed based on the same platform as the VW Beetle. Named the ‘Porsche 64’ and released in 1938, the model’s unique design and upscale vibe immediately caught on with buyers. Of course, the company’s growth was impeded when the war began, forcing Porsche to develop tanks instead of automobiles. However, the company bounced back as early as 1947, when the Grand Prix racing car made its debut. Shortly after, in ‘48, Ferdinand’s son Ferry Porsche created the company’s first-ever sports car – the 356.</p>
+        <p>By the 60s, the Porsche family was designing and producing popular sports cars that debuted with much anticipation at the Frankfurt International Auto Show every year. Then, in 1964, a legend was born when the first-ever Porsche 911 made its first splash in the industry. Over the next few decades, Porsche continued to expand and innovate in its lineup, until the Porsche 911 Turbo released in 1995 was the first vehicle to ever have onboard computer diagnosis, something that would revolutionize the auto service industry.</p>
+        <p>Still to this day, Porsche has maintained its status in the industry as a producer of unparalleled supercars and racing innovations. While it has many nameplates besides just the Porsche 911, the 911 is perhaps the most iconic and versatile model under the brand’s name, with over twenty-one different models and seven trim levels.</p>
+    </div>
+
+    <div class="grid-container">
+        <!-- PORSCHE 911 -->
+        <div id="porsche911-section">
+            <h2>PORSCHE 911</h2>
+            <p>The Porsche 911, often hailed as the epitome of automotive engineering, stands as a testament to Porsche's relentless pursuit of perfection. Since its introduction in 1963, the 911 has evolved into a timeless and iconic sports car, maintaining its rear-engine, rear-wheel-drive layout. This enduring design, coupled with exceptional performance, has solidified the 911's status as a symbol of precision, innovation, and engineering excellence, capturing the hearts of enthusiasts for decades.</p>
+            <img src="https://porschepictures.flowcenter.de/pmdb/thumbnail.cgi?id=252978&w=1935&h=1089&crop=1&public=1&cs=414c41f84da06e88" alt="Porsche 911" width="550" height="400">
+        </div>
+
+        <!-- PORSCHE 356 -->
+        <div id="porsche356-section">
+            <h2>PORSCHE 356</h2>
+            <p>The Porsche 356, the inaugural production car for the brand, marked the beginning of an illustrious journey. Introduced in the late 1940s, the 356 was a revelation, featuring a lightweight and aerodynamic design that set new standards in the sports car market. Renowned for its agility and handling, the 356 laid the foundation for Porsche's future sports car endeavors, creating a legacy that continues to influence the brand's commitment to performance and innovation.</p>
+            <img src="https://www.forbesindia.com/media/images/2019/Apr/img_115123_064-067_fa0219_life.porsche_1.jpg" alt="Porsche 356" width="550" height="400">
+        </div>
+
+        <!-- Porsche 917 -->
+        <div id="porsche917-section">
+            <h2>PORSCHE 917</h2>
+            <p>The Porsche 917, a legend in the world of motorsports, emerged in the late 1960s with a singular purpose – to dominate the Le Mans 24 Hours endurance race. The 917 not only achieved remarkable success but etched its name in racing history by winning the prestigious race multiple times. This dominance solidified Porsche's reputation as a dominant force in motorsport, with the 917 becoming an iconic symbol of speed, power, and engineering excellence.</p>
+            <img src="https://www.topgear.com/sites/default/files/images/news-article/carousel/2021/05/6e4ee8117992927ed03676ddfd7cb7b3/1970-porsche-917-k-_5.jpg?w=1784&h=1004" alt="Porsche 917" width="550" height="350">
+        </div>
+
+        <!-- PORSCHE Carrera GT -->
+        <div id="porscheCarreraGt-section">
+            <h2>PORSCHE CARRERA GT</h2>
+            <p>Unveiled in the early 2000s, the Porsche Carrera GT stands as a pinnacle of supercar engineering. With its mid-engine layout and a potent V10 engine, the Carrera GT transcends conventional boundaries. Its breathtaking performance and striking design have positioned it among the greatest supercars of its era. Enthusiasts marvel at its speed, elegance, and engineering prowess, making the Carrera GT a timeless masterpiece in the realm of automotive excellence.</p>
+            <img src="https://www.ixocollections.com/img/cms/Porsche%20edito%2026/PORSCHE-Carrera-GT--DP-5-.jpg" alt="Porsche Carrera GT" width="550" height="400">
+        </div>
+
+        <!-- Porsche 959 -->
+        <div id="porsche959-section">
+            <h2>PORSCHE 959</h2>
+            <p>Stepping into the 1980s, the Porsche 959 emerged as a groundbreaking sports car, setting a new standard for performance and technological innovation. Among the first to introduce features like all-wheel drive and variable ride height, the 959 showcased Porsche's commitment to pushing the limits of what a sports car could achieve. Its innovative technology and exceptional performance not only elevated the 959 to legendary status but also paved the way for future advancements in the sports car industry.</p>
+            <img src="https://hips.hearstapps.com/hmg-prod/images/porsche-959-archived-test-review-car-and-driver-photo-616188-s-original-1584459131.jpg?crop=0.91640625xw:1xh;center,top&resize=1200:*" alt="Porsche 959" width="550" height="350">
+        </div>
+
+        <!-- Porsche 550 Spyder -->
+        <div id="porsche550spyder-section">
+            <h2>PORSCHE 550 SPYDER</h2>
+            <p>Porsche 550 Spyder, a classic racing car from the 1950s, holds a special place in automotive history. Renowned for its lightweight construction and exceptional handling, the 550 Spyder became a formidable competitor on the track. Its success on the racing circuit and association with iconic figures like James Dean have cemented its status as a timeless symbol of Porsche's racing heritage.</p>
+            <img src="https://journal.classiccars.com/media/2022/03/1955-Porsche-550-Spyder-26-1280x830.jpg" alt="Porsche 550 Spyder" width="550" height="400">
+        </div>
+
+        <!-- Porsche 928 -->
+        <div id="porsche928-section">
+            <h2>PORSCHE 928</h2>
+            <p>The Porsche 928, introduced in the late 1970s, represented a departure from tradition with its front-engine, rear-transaxle layout. Designed as a luxurious grand tourer, the 928 offered a unique blend of performance and comfort. Despite its deviation from the classic Porsche formula, the 928 garnered praise for its refined driving experience and innovative design, showcasing Porsche's versatility and engineering prowess.</p>
+            <img src="https://images.caradisiac.com/logos-ref/modele/modele--porsche-928/S7-modele--porsche-928.jpg" alt="Porsche 928" width="550" height="420">
+        </div>
+    </div>
+
+    <script>
+        function toggleSideMenu() {
+            var sideMenu = document.getElementById("sideMenu");
+            sideMenu.style.right = sideMenu.style.right === "0px" ? "-250px" : "0px";
+        }
+
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            window.scrollTo({
+                top: section.offsetTop - 50,
+                behavior: "smooth"
+            });
+        }
+
+        // Function to show image with animation
+        function showImage() {
+            var image = document.getElementById("porscheImage");
+            image.style.display = "block";
+            setTimeout(function() {
+                image.classList.add("visible");
+            }, 100);
+        }
+
+        function hideImage() {
+            var image = document.getElementById("porscheImage");
+            image.classList.remove("visible");
+            setTimeout(function() {
+                image.style.display = "none";
+            }, 500); // Adjust the delay to match the transition duration
+        }
+
+        // Call showImage function when hovering over the title
+        document.getElementById("history-of-porsche").addEventListener("mouseover", showImage);
+        // Call hideImage function when moving the mouse out of the title
+        document.getElementById("history-of-porsche").addEventListener("mouseleave", hideImage);
+    </script>
+</body>
+</html>
